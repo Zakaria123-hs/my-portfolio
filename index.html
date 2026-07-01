@@ -238,10 +238,6 @@
         <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
         About
       </a>
-      <a href="#services" data-section="services" onclick="closeSidebar()">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-        Services
-      </a>
       <a href="#portfolio" data-section="portfolio" onclick="closeSidebar()">
         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
         Portfolio
@@ -425,16 +421,6 @@
         </div>
       </section>
 
-      <!-- ── SERVICES placeholder ── -->
-      <section id="services" class="placeholder-section">
-        <div class="section-header" style="text-align:center">
-          <h2 class="section-title">My <span>Services</span></h2>
-          <div class="section-line" id="line-services" style="margin:8px auto 0"></div>
-        </div>
-        <p style="color:var(--text-sub);font-size:14px">Coming soon...</p>
-      </section>
-
-
       <!-- ── PORTFOLIO ── -->
       <section id="portfolio">
         <div class="section-header">
@@ -552,7 +538,7 @@
                 <span class="proj-tag">Gemini API</span>
               </div>
               <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/task-management.git" target="_blank" class="proj-btn proj-btn-gh">
+                <a href="https://github.com/Zakaria123-hs/Simple-AI-Agent-Python" target="_blank" class="proj-btn proj-btn-gh">
                   <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                   GitHub
                 </a>
@@ -627,7 +613,7 @@
                 <span class="proj-tag">WebRTC</span>
               </div>
               <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs" target="_blank" class="proj-btn proj-btn-gh">
+                <a href="https://github.com/Zakaria123-hs/Multilingual-AI-Communication" target="_blank" class="proj-btn proj-btn-gh">
                   <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
                   GitHub
                 </a>
@@ -643,12 +629,112 @@
       </section>
 
       <!-- ── CONTACT placeholder ── -->
-      <section id="contact" class="placeholder-section">
-        <div class="section-header" style="text-align:center">
+      <section id="contact">
+        <div class="section-header">
           <h2 class="section-title">Contact <span>Me</span></h2>
-          <div class="section-line" id="line-contact" style="margin:8px auto 0"></div>
+          <div class="section-line" id="line-contact"></div>
         </div>
-        <p style="color:var(--text-sub);font-size:14px">Coming soon...</p>
+ 
+        <div class="contact-grid">
+ 
+          <!-- Left: Info -->
+          <div class="contact-info">
+            <p class="contact-intro">
+              I'm currently open to new opportunities — whether it's a full-time role, freelance project, or just a good conversation about tech. My inbox is always open.
+            </p>
+ 
+            <div class="contact-card reveal">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Email</span>
+                <a href="mailto:zakariahasbi19@gmail.com" class="contact-card-value">zakariahasbi19@gmail.com</a>
+              </div>
+            </div>
+ 
+            <div class="contact-card reveal" style="transition-delay:.1s">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Location</span>
+                <span class="contact-card-value">Casablanca, Morocco</span>
+              </div>
+            </div>
+ 
+            <div class="contact-card reveal" style="transition-delay:.2s">
+              <div class="contact-card-icon">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">Status</span>
+                <div class="availability-badge">
+                  <span class="avail-dot"></span>
+                  Available for work
+                </div>
+              </div>
+            </div>
+ 
+            <div class="contact-socials reveal" style="transition-delay:.3s">
+              <a href="https://github.com/Zakaria123-hs" target="_blank" class="contact-social" title="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/zakaria-hasbi" target="_blank" class="contact-social" title="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://leetcode.com/u/zakaria_hasbi/" target="_blank" class="contact-social" title="LeetCode">
+                <svg viewBox="0 0 24 24"><path d="M9 12h6M7.5 7.5l-3 4.5 3 4.5M16.5 7.5l3 4.5-3 4.5"/></svg>
+              </a>
+            </div>
+          </div>
+ 
+          <!-- Right: Form -->
+          <div class="contact-form-wrap reveal" style="transition-delay:.15s">
+            <h3 class="form-title">Send a Message</h3>
+            <p class="form-sub">Fill out the form below and I'll get back to you as soon as possible.</p>
+ 
+            <form id="contactForm" action="https://formspree.io/f/xnjkgwqq" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">Name</label>
+                  <input type="text" id="fname" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="femail">Email</label>
+                  <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="fsubject">Subject</label>
+                <input type="text" id="fsubject" name="subject" placeholder="What is this about?" required />
+              </div>
+              <div class="form-group">
+                <label for="fmessage">Message</label>
+                <textarea id="fmessage" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                Send Message
+                <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+ 
+            <div class="form-success" id="formSuccess">
+              <div class="success-icon">
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <h4>Message Sent!</h4>
+              <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+ 
+        </div>
+ 
+        <!-- Footer -->
+        <div class="contact-footer">
+          Designed & built by <span>Zakaria Hasbi</span> · 2026
+        </div>
+ 
       </section>
 
     </div><!-- /sections -->
