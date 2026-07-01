@@ -713,6 +713,8 @@
     .photo-wrap { width: 220px; height: 256px; }
     .nav-dots { display: none; }
     #portfolio { padding: 64px 40px; }
+    #contact { padding: 64px 40px 80px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 28px; }
   }
 
   @media (max-width: 768px) {
@@ -734,6 +736,9 @@
     .stats-row { gap: 10px; }
         #portfolio { padding: 64px 24px; }
     .proj-grid { grid-template-columns: 1fr; }
+    #contact { padding: 64px 24px 80px; }
+    .form-row { grid-template-columns: 1fr; }
+    .contact-form-wrap { padding: 24px; }
   }
 
   @media (max-width: 480px) {
@@ -747,8 +752,152 @@
     .card { padding: 20px; }
     #about { padding: 48px 16px; }
     #portfolio { padding: 48px 16px; }
+    #contact { padding: 48px 16px 64px; }
 
   }
 
-
-  
+#contact {
+    padding: 80px 80px 100px;
+    display: flex; flex-direction: column; justify-content: center;
+    border-top: 1px solid var(--border);
+    min-height: 100vh;
+  }
+ 
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 32px;
+    align-items: start;
+  }
+ 
+  /* ── Info side ── */
+  .contact-info { display: flex; flex-direction: column; gap: 16px; }
+ 
+  .contact-intro {
+    font-size: 15px; line-height: 1.8;
+    color: var(--text-sub); margin-bottom: 8px;
+  }
+ 
+  .contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px;
+    display: flex; align-items: center; gap: 16px;
+    transition: background var(--transition), border-color var(--transition), transform 0.25s, box-shadow 0.25s;
+  }
+  .contact-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px var(--accent-glow); border-color: var(--accent); }
+ 
+  .contact-card-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--accent-glow);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-card-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+ 
+  .contact-card-text { display: flex; flex-direction: column; gap: 2px; }
+  .contact-card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-sub); }
+  .contact-card-value { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; }
+  .contact-card-value:hover { color: var(--accent); }
+ 
+  .availability-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+    border-radius: 100px; padding: 10px 16px;
+    font-size: 13px; font-weight: 600; color: #16a34a;
+    margin-top: 4px;
+  }
+  [data-theme="dark"] .availability-badge { color: #4ade80; background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.2); }
+  .avail-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: #16a34a;
+    animation: pulse-green 2s ease-in-out infinite;
+  }
+  [data-theme="dark"] .avail-dot { background: #4ade80; }
+ 
+  /* Social row */
+  .contact-socials { display: flex; gap: 10px; margin-top: 8px; }
+  .contact-social {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-sub); text-decoration: none;
+    transition: all 0.22s;
+  }
+  .contact-social:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
+  .contact-social svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+ 
+  /* ── Form side ── */
+  .contact-form-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px; padding: 36px;
+    transition: background var(--transition), border-color var(--transition);
+  }
+ 
+  .form-title { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .form-sub   { font-size: 13px; color: var(--text-sub); margin-bottom: 28px; }
+ 
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+ 
+  .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+  .form-group label { font-size: 12px; font-weight: 600; color: var(--text-sub); text-transform: uppercase; letter-spacing: 0.06em; }
+ 
+  .form-group input,
+  .form-group textarea {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 14px; font-family: 'Inter', sans-serif;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.22s, box-shadow 0.22s, background var(--transition);
+    resize: none;
+    width: 100%;
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: var(--text-sub); opacity: 0.6; }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+ 
+  .form-group textarea { height: 130px; }
+ 
+  .form-submit {
+    width: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: var(--accent); color: #fff;
+    border: none; border-radius: 12px;
+    padding: 14px; font-size: 14px; font-weight: 600;
+    font-family: 'Inter', sans-serif; cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 24px var(--accent-glow);
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 32px var(--accent-glow); }
+  .form-submit:active { transform: scale(0.98); }
+  .form-submit svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+ 
+  /* Success message */
+  .form-success {
+    display: none; text-align: center; padding: 28px 0;
+  }
+  .form-success .success-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: rgba(34,197,94,0.12); border: 2px solid rgba(34,197,94,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .form-success .success-icon svg { width: 26px; height: 26px; stroke: #16a34a; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .form-success h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .form-success p  { font-size: 13px; color: var(--text-sub); }
+ 
+  /* Footer strip */
+  .contact-footer {
+    text-align: center; margin-top: 60px;
+    font-size: 13px; color: var(--text-sub);
+    padding-top: 32px; border-top: 1px solid var(--border);
+  }
+  .contact-footer span { color: var(--accent); }
+ 
