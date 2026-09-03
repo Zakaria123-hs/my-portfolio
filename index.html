@@ -258,9 +258,6 @@
         <span></span><span></span><span></span>
       </div>
       <div class="topbar-right">
-        <div class="icon-btn" title="Settings">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-        </div>
         <div class="icon-btn" onclick="toggleTheme()" title="Toggle dark mode">
           <svg id="themeIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         </div>
@@ -438,192 +435,190 @@
 
         <!-- Cards grid -->
         <div class="proj-grid">
-
-          <!-- ── HR Management ── -->
           <div class="proj-card reveal" data-cat="fullstack">
-            <div class="proj-gallery">
-              <img src="HR.png" class="proj-main-img" id="main-hr" alt="HR System" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="proj-gallery-placeholder" style="--c1:#6366f1;--c2:#8b5cf6;display:none">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              <div class="proj-gallery">
+                <img src="HR.png" class="proj-main-img" id="main-hr" alt="HR System" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="proj-gallery-placeholder" style="--c1:#6366f1;--c2:#8b5cf6;display:none">
+                  <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+              </div>
+              <div class="proj-thumbs">
+                <img src="HR.png" class="proj-thumb active" onclick="switchImg('main-hr',this,'HR.png')" alt="dashboard">
+                <img src="HR2.png" class="proj-thumb" onclick="switchImg('main-hr',this,'HR2.png')" alt="employees">
+                <img src="HR3.png" class="proj-thumb" onclick="switchImg('main-hr',this,'HR3.png')" alt="add employee">
+                <img src="HR4.png" class="proj-thumb" onclick="switchImg('main-hr',this,'HR4.png')" alt="profile">
+              </div>
+              <div class="proj-body">
+                <div class="proj-top-row">
+                  <span class="proj-cat-badge proj-cat-full">Full Stack</span>
+                </div>
+                <h3 class="proj-title">HR Management System</h3>
+                <p class="proj-desc">Complete HR platform for managing employee leave requests, document workflows and CRUD operations — with role-based access for HR, supervisors and employees.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">React</span>
+                  <span class="proj-tag">Laravel</span>
+                  <span class="proj-tag">MySQL</span>
+                </div>
+                <div class="proj-btns">
+                  <a href="https://github.com/Zakaria123-hs/HR-system.git" target="_blank" class="proj-btn proj-btn-gh">
+                    <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#" class="proj-btn proj-btn-demo">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="proj-thumbs">
-              <img src="HR.png"   class="proj-thumb active" onclick="switchImg('main-hr',this,'HR.png')"   alt="dashboard">
-              <img src="HR2.png"   class="proj-thumb"        onclick="switchImg('main-hr',this,'HR2.png')"   alt="employees">
-              <img src="HR3.png" class="proj-thumb"       onclick="switchImg('main-hr',this,'HR3.png')" alt="add employee">
-              <img src="HR4.png"     class="proj-thumb"        onclick="switchImg('main-hr',this,'HR4.png')"     alt="profile">
-            </div>
-            <div class="proj-body">
-              <div class="proj-top-row">
-                <span class="proj-cat-badge proj-cat-full">Full Stack</span>
-              </div>
-              <h3 class="proj-title">HR Management System</h3>
-              <p class="proj-desc">Complete HR platform for managing employee leave requests, document workflows and CRUD operations — with role-based access for HR, supervisors and employees.</p>
-              <div class="proj-tags">
-                <span class="proj-tag">React</span>
-                <span class="proj-tag">Laravel</span>
-                <span class="proj-tag">MySQL</span>
-              </div>
-              <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/HR-system.git" target="_blank" class="proj-btn proj-btn-gh">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="proj-btn proj-btn-demo">
-                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- ── Timetable System ── -->
-          <div class="proj-card reveal" data-cat="fullstack" style="transition-delay:.1s">
-            <div class="proj-gallery">
-              <img src="TT1.png" class="proj-main-img" id="main-tt" alt="Timetable" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="proj-gallery-placeholder" style="--c1:#0ea5e9;--c2:#06b6d4;display:none">
-                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div class="proj-card reveal" data-cat="fullstack" style="transition-delay:.1s">
+              <div class="proj-gallery">
+                <img src="TT1.png" class="proj-main-img" id="main-tt" alt="Timetable" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="proj-gallery-placeholder" style="--c1:#0ea5e9;--c2:#06b6d4;display:none">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+              </div>
+              <div class="proj-thumbs">
+                <img src="TT1.png" class="proj-thumb active" onclick="switchImg('main-tt',this,'TT1.png')" alt="main">
+                <img src="TT2.png" class="proj-thumb" onclick="switchImg('main-tt',this,'TT2.png')" alt="modules">
+                <img src="TT3.png" class="proj-thumb" onclick="switchImg('main-tt',this,'TT3.png')" alt="trainers">
+                <img src="TT4.png" class="proj-thumb" onclick="switchImg('main-tt',this,'TT4.png')" alt="slots">
+              </div>
+              <div class="proj-body">
+                <div class="proj-top-row">
+                  <span class="proj-cat-badge proj-cat-full">Full Stack</span>
+                </div>
+                <h3 class="proj-title">Timetable Planning System</h3>
+                <p class="proj-desc">Web scheduling system to manage modules, trainers and session assignments — with conflict validation logic to guarantee consistent time slots.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">React</span>
+                  <span class="proj-tag">PHP</span>
+                  <span class="proj-tag">MySQL</span>
+                </div>
+                <div class="proj-btns">
+                  <a href="https://github.com/Zakaria123-hs/react-php-timetable-system.git" target="_blank" class="proj-btn proj-btn-gh">
+                    <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#" class="proj-btn proj-btn-demo">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="proj-thumbs">
-              <img src="TT1.png"    class="proj-thumb active" onclick="switchImg('main-tt',this,'TT1.png')"     alt="main">
-              <img src="TT2.png"    class="proj-thumb"        onclick="switchImg('main-tt',this,'TT2.png')"     alt="modules">
-              <img src="TT3.png"    class="proj-thumb"        onclick="switchImg('main-tt',this,'TT3.png')"     alt="trainers">
-              <img src="TT4.png"    class="proj-thumb"        onclick="switchImg('main-tt',this,'TT4.png')"     alt="slots">
-            </div>
-            <div class="proj-body">
-              <div class="proj-top-row">
-                <span class="proj-cat-badge proj-cat-full">Full Stack</span>
-              </div>
-              <h3 class="proj-title">Timetable Planning System</h3>
-              <p class="proj-desc">Web scheduling system to manage modules, trainers and session assignments — with conflict validation logic to guarantee consistent time slots.</p>
-              <div class="proj-tags">
-                <span class="proj-tag">React</span>
-                <span class="proj-tag">PHP</span>
-                <span class="proj-tag">MySQL</span>
-              </div>
-              <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/react-php-timetable-system.git" target="_blank" class="proj-btn proj-btn-gh">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="proj-btn proj-btn-demo">
-                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- ── AI Task Manager ── -->
-          <div class="proj-card reveal" data-cat="ai" style="transition-delay:.2s">
-            <div class="proj-gallery">
-              <img src="images/tasks/main.png" class="proj-main-img" id="main-task" alt="AI Tasks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="proj-gallery-placeholder" style="--c1:#f59e0b;--c2:#ef4444;display:none">
-                <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 8v4l3 3"/></svg>
+            <div class="proj-card reveal" data-cat="ai" style="transition-delay:.2s">
+              <div class="proj-gallery">
+                <img src="images/tasks/main.png" class="proj-main-img" id="main-task" alt="AI Tasks" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="proj-gallery-placeholder" style="--c1:#f59e0b;--c2:#ef4444;display:none">
+                  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2z"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+              </div>
+              <div class="proj-body">
+                <div class="proj-top-row">
+                  <span class="proj-cat-badge proj-cat-ai">AI</span>
+                </div>
+                <h3 class="proj-title">Task Automation AI Agent</h3>
+                <p class="proj-desc">
+                  Developed a backend AI agent that interprets natural language requests and generates structured tasks and subtasks using the Gemini API. Designed to be integrated into task management applications.
+                </p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Python</span>
+                  <span class="proj-tag">Flask</span>
+                  <span class="proj-tag">Gemini API</span>
+                </div>
+                <div class="proj-btns">
+                  <a href="https://github.com/Zakaria123-hs/Simple-AI-Agent-Python" target="_blank" class="proj-btn proj-btn-gh">
+                    <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#" class="proj-btn proj-btn-demo">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="proj-body">
-              <div class="proj-top-row">
-                <span class="proj-cat-badge proj-cat-ai">AI</span>
-              </div>
-              <h3 class="proj-title">Task Automation AI Agent</h3>
 
-              <p class="proj-desc">
-              Developed a backend AI agent that interprets natural language requests and generates structured tasks and subtasks using the Gemini API. Designed to be integrated into task management applications.
-              </p>
-              <div class="proj-tags">
-                <span class="proj-tag">Python</span>
-                <span class="proj-tag">Flask</span>
-                <span class="proj-tag">Gemini API</span>
+            <div class="proj-card reveal" data-cat="ai" style="transition-delay:.3s">
+              <div class="proj-gallery">
+                <img src="CHB1.png" class="proj-main-img" id="main-bot" alt="WhatsApp Bot" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="proj-gallery-placeholder" style="--c1:#16a34a;--c2:#15803d;display:none">
+                  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </div>
               </div>
-              <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/Simple-AI-Agent-Python" target="_blank" class="proj-btn proj-btn-gh">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="proj-btn proj-btn-demo">
-                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
+              <div class="proj-thumbs">
+                <img src="CHB1.png" class="proj-thumb active" onclick="switchImg('main-bot',this,'CHB1.png')" alt="main">
+                <img src="CHB2.png" class="proj-thumb" onclick="switchImg('main-bot',this,'CHB2.png')" alt="flow">
+              </div>
+              <div class="proj-body">
+                <div class="proj-top-row">
+                  <span class="proj-cat-badge proj-cat-ai">AI</span>
+                </div>
+                <h3 class="proj-title">WhatsApp Sales Chatbot</h3>
+                <p class="proj-desc">AI-powered WhatsApp chatbot for e-commerce sales. Handles client conversations, understands product queries and processes orders via Meta API and Groq LLM.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Laravel</span>
+                  <span class="proj-tag">WhatsApp API</span>
+                  <span class="proj-tag">Groq API</span>
+                </div>
+                <div class="proj-btns">
+                  <a href="https://github.com/Zakaria123-hs/chatbot-whatsapp.git" target="_blank" class="proj-btn proj-btn-gh">
+                    <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#" class="proj-btn proj-btn-demo">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- ── WhatsApp Chatbot ── -->
-          <div class="proj-card reveal" data-cat="ai" style="transition-delay:.3s">
-            <div class="proj-gallery">
-              <img src="CHB1.png" class="proj-main-img" id="main-bot" alt="WhatsApp Bot" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="proj-gallery-placeholder" style="--c1:#16a34a;--c2:#15803d;display:none">
-                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <div class="proj-card reveal" data-cat="ai" style="transition-delay:.4s">
+              <div class="proj-gallery">
+                <img src="CO1.png" class="proj-main-img" id="main-tr" alt="Translation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                <div class="proj-gallery-placeholder" style="--c1:#7c3aed;--c2:#2563eb;display:none">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+              </div>
+              <div class="proj-thumbs">
+                <img src="CO1.png" class="proj-thumb active" onclick="switchImg('main-tr',this,'CO1.png')" alt="main">
+                <img src="CO2.png" class="proj-thumb" onclick="switchImg('main-tr',this,'CO2.png')" alt="voice">
+                <img src="CO3.png" class="proj-thumb" onclick="switchImg('main-tr',this,'CO3.png')" alt="live">
+              </div>
+              <div class="proj-body">
+                <div class="proj-top-row">
+                  <span class="proj-cat-badge proj-cat-ai">AI</span>
+                </div>
+                <h3 class="proj-title">Multilingual AI Communication</h3>
+                <p class="proj-desc">Real-time voice translation module with AI — speech recognition via Groq Whisper, multilingual pipeline (Google → MyMemory → LibreTranslate) and live TTS playback across all devices.</p>
+                <div class="proj-tags">
+                  <span class="proj-tag">Vue.js 3</span>
+                  <span class="proj-tag">Node.js</span>
+                  <span class="proj-tag">WebSocket</span>
+                  <span class="proj-tag">Groq Whisper</span>
+                  <span class="proj-tag">WebRTC</span>
+                </div>
+                <div class="proj-btns">
+                  <a href="https://github.com/Zakaria123-hs/Multilingual-AI-Communication" target="_blank" class="proj-btn proj-btn-gh">
+                    <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                    GitHub
+                  </a>
+                  <a href="#" class="proj-btn proj-btn-demo">
+                    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="proj-thumbs">
-              <img src="CHB1.png"  class="proj-thumb active" onclick="switchImg('main-bot',this,'CHB1.png')"  alt="main">
-              <img src="CHB2.png"  class="proj-thumb"        onclick="switchImg('main-bot',this,'CHB2.png')"  alt="flow">
-            </div>
-            <div class="proj-body">
-              <div class="proj-top-row">
-                <span class="proj-cat-badge proj-cat-ai">AI</span>
-              </div>
-              <h3 class="proj-title">WhatsApp Sales Chatbot</h3>
-              <p class="proj-desc">AI-powered WhatsApp chatbot for e-commerce sales. Handles client conversations, understands product queries and processes orders via Meta API and Groq LLM.</p>
-              <div class="proj-tags">
-                <span class="proj-tag">Laravel</span>
-                <span class="proj-tag">WhatsApp API</span>
-                <span class="proj-tag">Groq API</span>
-              </div>
-              <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/chatbot-whatsapp.git" target="_blank" class="proj-btn proj-btn-gh">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="proj-btn proj-btn-demo">
-                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
 
-          <!-- ── Multilingual AI ── -->
-          <div class="proj-card reveal" data-cat="ai" style="transition-delay:.4s">
-            <div class="proj-gallery">
-              <img src="CO1.png" class="proj-main-img" id="main-tr" alt="Translation" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-              <div class="proj-gallery-placeholder" style="--c1:#7c3aed;--c2:#2563eb;display:none">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-              </div>
-            </div>
-            <div class="proj-thumbs">
-              <img src="CO1.png"   class="proj-thumb active" onclick="switchImg('main-tr',this,'CO1.png')"   alt="main">
-              <img src="CO2.png"  class="proj-thumb"        onclick="switchImg('main-tr',this,'CO2.png')"  alt="voice">
-              <img src="CO3.png"   class="proj-thumb"        onclick="switchImg('main-tr',this,'CO3.png')"   alt="live">
-            </div>
-            <div class="proj-body">
-              <div class="proj-top-row">
-                <span class="proj-cat-badge proj-cat-ai">AI</span>
-              </div>
-              <h3 class="proj-title">Multilingual AI Communication</h3>
-              <p class="proj-desc">Real-time voice translation module with AI — speech recognition via Groq Whisper, multilingual pipeline (Google → MyMemory → LibreTranslate) and live TTS playback across all devices.</p>
-              <div class="proj-tags">
-                <span class="proj-tag">Vue.js 3</span>
-                <span class="proj-tag">Node.js</span>
-                <span class="proj-tag">WebSocket</span>
-                <span class="proj-tag">Groq Whisper</span>
-                <span class="proj-tag">WebRTC</span>
-              </div>
-              <div class="proj-btns">
-                <a href="https://github.com/Zakaria123-hs/Multilingual-AI-Communication" target="_blank" class="proj-btn proj-btn-gh">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-                  GitHub
-                </a>
-                <a href="#" class="proj-btn proj-btn-demo">
-                  <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                  Live Demo
-                </a>
-              </div>
-            </div>
+          </div><div id="toast-demo" class="toast-popup">
+            <span>Live demo is not available right now.</span>
           </div>
+              
 
         </div><!-- /proj-grid -->
       </section>
@@ -866,7 +861,23 @@ function switchImg(mainId, thumb, newSrc) {
   thumb.closest('.proj-thumbs').querySelectorAll('.proj-thumb').forEach(t => t.classList.remove('active'));
   thumb.classList.add('active');
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const demoButtons = document.querySelectorAll(".proj-btn-demo");
+  const toast = document.getElementById("toast-demo");
+  let toastTimeout;
 
+  demoButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      toast.classList.add("show");
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
+    });
+  });
+});
 </script>
 </body>
 </html>
