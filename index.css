@@ -700,61 +700,7 @@
   /* ════════════════════════════
      KEYFRAMES
   ════════════════════════════ */
-  @keyframes floatShape { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
-  @keyframes cursorBlink { 0%,100%{border-color:var(--accent)} 50%{border-color:transparent} }
-  @keyframes slideDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
 
-  /* ════════════════════════════
-     RESPONSIVE
-  ════════════════════════════ */
-  @media (max-width: 1024px) {
-    #home { padding: 0 40px 60px; gap: 40px; }
-    #about { padding: 80px 40px; }
-    .photo-wrap { width: 220px; height: 256px; }
-    .nav-dots { display: none; }
-    #portfolio { padding: 64px 40px; }
-    #contact { padding: 64px 40px 80px; }
-    .contact-grid { grid-template-columns: 1fr; gap: 28px; }
-  }
-
-  @media (max-width: 768px) {
-    .sidebar { transform: translateX(-100%); width: 220px; }
-    .hamburger { display: flex; }
-    .main { margin-left: 0; }
-    .topbar { left: 0; padding: 16px 20px; }
-
-    #home { flex-direction: column-reverse; align-items: center; justify-content: center; padding: 24px 24px 48px; gap: 32px; text-align: center; min-height: calc(100vh - 72px); }
-    .hero-content { max-width: 100%; }
-    .bio-short { max-width: 100%; }
-    .socials { justify-content: center; }
-    .photo-wrap { width: 180px; height: 210px; }
-
-    #about { padding: 64px 24px; }
-    .grid-2 { grid-template-columns: 1fr; }
-    .bio-card { flex-direction: column; text-align: center; }
-    .bio-photo { margin: 0 auto; }
-    .stats-row { gap: 10px; }
-        #portfolio { padding: 64px 24px; }
-    .proj-grid { grid-template-columns: 1fr; }
-    #contact { padding: 64px 24px 80px; }
-    .form-row { grid-template-columns: 1fr; }
-    .contact-form-wrap { padding: 24px; }
-  }
-
-  @media (max-width: 480px) {
-    #home { padding: 16px 16px 40px; gap: 24px; }
-    .photo-wrap { width: 150px; height: 175px; }
-    .headline { font-size: clamp(22px, 7vw, 32px); }
-    .bio-short, .bio-text p { font-size: 14px; }
-    .cta { padding: 12px 24px; font-size: 13px; }
-    .stats-row { grid-template-columns: repeat(3,1fr); }
-    .stat-num { font-size: 24px; }
-    .card { padding: 20px; }
-    #about { padding: 48px 16px; }
-    #portfolio { padding: 48px 16px; }
-    #contact { padding: 48px 16px 64px; }
-
-  }
 
 #contact {
     padding: 80px 80px 100px;
@@ -900,4 +846,154 @@
     padding-top: 32px; border-top: 1px solid var(--border);
   }
   .contact-footer span { color: var(--accent); }
- 
+ .toast-popup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #f59e0b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.toast-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+  @keyframes floatShape { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+  @keyframes cursorBlink { 0%,100%{border-color:var(--accent)} 50%{border-color:transparent} }
+  @keyframes slideDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
+
+@media (max-width: 1024px) {
+  #home { padding: 0 40px 60px; gap: 40px; }
+  #about { padding: 80px 40px; }
+  .photo-wrap { width: clamp(180px, 25vw, 220px); height: auto; aspect-ratio: 220 / 256; }
+  .nav-dots { display: none; }
+  #contact {
+    padding: 60px 40px;
+  }
+
+  .contact-grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); width: 220px; }
+  .hamburger { display: flex; }
+  .main { margin-left: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
+  .topbar { left: 0; width: 100%; padding: 16px 20px; box-sizing: border-box; }
+
+  #home { 
+    flex-direction: column-reverse; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 24px 24px 48px; 
+    gap: 32px; 
+    text-align: center; 
+    min-height: calc(100vh - 72px); 
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero-content { max-width: 100%; width: 100%; }
+  .bio-short { max-width: 100%; }
+  .socials { justify-content: center; }
+  .photo-wrap { width: clamp(150px, 40vw, 180px); height: auto; aspect-ratio: 180 / 210; }
+
+  #about { padding: 64px 24px; width: 100%; box-sizing: border-box; }
+  .grid-2 { grid-template-columns: 1fr; width: 100%; }
+  .bio-card { flex-direction: column; text-align: center; width: 100%; box-sizing: border-box; }
+  .bio-photo { margin: 0 auto; max-width: 100%; height: auto; }
+  .stats-row { gap: 10px; width: 100%; }
+  #contact {
+    padding: 48px 24px;
+  }
+
+  /* Stack info section and form vertically */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-intro {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .contact-card {
+    justify-content: flex-start;
+  }
+
+  .contact-socials {
+    justify-content: center;
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .contact-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  #home { padding: 16px 16px 40px; gap: 24px; }
+  .photo-wrap { width: 150px; max-width: 100%; height: auto; aspect-ratio: 150 / 175; }
+  .headline { font-size: clamp(22px, 7vw, 32px); word-break: break-word; }
+  .bio-short, .bio-text p { font-size: 14px; }
+  .cta { padding: 12px 24px; font-size: 13px; }
+  
+  /* Fixed stats row to allow auto-wrapping if items exceed screen width */
+  .stats-row { 
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .stat-num { font-size: 24px; }
+  .card { padding: 20px; width: 100%; box-sizing: border-box; }
+  #about { padding: 48px 16px; }
+  #contact {
+    padding: 40px 16px;
+  }
+
+  /* Stack First Name and Email inputs vertically */
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .contact-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .contact-card-value {
+    font-size: 14px;
+    word-break: break-word; /* Prevents long emails from causing overflow */
+  }
+
+  .form-submit {
+    padding: 14px 20px;
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .contact-form-wrap {
+    padding: 20px 16px;
+  }
+}
